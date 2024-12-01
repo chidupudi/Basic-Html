@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copy Restriction</title>
@@ -18,7 +19,7 @@
         document.addEventListener("selectstart", (event) => {
             event.preventDefault();
         });
-        
+
         // Intercept copy event
         document.addEventListener("copy", (event) => {
             // Replace the copied text with a custom message
