@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Restriction</title>
+    <style>
+        body {
+            user-select: none; /* Disable text selection */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This text cannot be copied. Try it!</p>
+
+    <script>
+        // Disable text selection
+        document.addEventListener("selectstart", (event) => {
+            event.preventDefault();
+        });
+
+        // Intercept copy event
+        document.addEventListener("copy", (event) => {
+            // Replace the copied text with a custom message
+            event.clipboardData.setData("text/plain", "Copying is disabled on this website.");
+            event.preventDefault(); // Prevent the default copy action
+            alert("You cannot copy text from this website!");
+        });
+    </script>
+</body>
+</html>
