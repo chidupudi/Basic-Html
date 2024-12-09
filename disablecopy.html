@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No Copy</title>
-    
+
     <style>
         body {
             user-select: none; /* Disable text selection */
@@ -14,10 +14,14 @@
 </head>
 <body>
     <h1>Welcome to My Website</h1>
+
     <p>This text cannot be copied. Try it!</p>
+
     <script>
         document.addEventListener("selectstart", (event) => {
+
             event.preventDefault();
+            
         });
         document.addEventListener("copy", (event) => {
             // Replace the copied text with a custom message
